@@ -1,0 +1,12 @@
+[Unit]
+Description=voxkey push-to-talk dictation
+After=graphical-session.target
+PartOf=graphical-session.target
+
+[Service]
+ExecStart=%h/.local/bin/voxkey
+Restart=on-failure
+Environment=RUST_LOG=info
+
+[Install]
+WantedBy=graphical-session.target

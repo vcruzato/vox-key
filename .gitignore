@@ -1,0 +1,8 @@
+# Rust
+/target
+
+# Claude Code local settings
+.claude/settings.local.json
+
+# Local docs (design specs/plans) — never committed
+docs/

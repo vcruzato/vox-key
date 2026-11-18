@@ -1,0 +1,9 @@
+# Copy to ~/.config/voxkey/config.toml and edit. All fields are optional.
+ptt_key      = "RightAlt"   # RightAlt(AltGr) | CapsLock | Menu | ScrollLock | Pause | F12 | ...
+model        = "small"      # tiny | base | small | medium  (must be fetched first)
+language     = "pt"         # any Whisper language code (en, es, …)
+input_device = "default"    # or a substring of the device name, e.g. "USB Audio"
+max_seconds  = 60           # hard cap on a single dictation
+hold_to_start_ms = 1000     # how long (ms) to hold the key before recording starts
+warn_seconds     = 30       # blink the tray icon during the last N seconds before the cap
+# model_path = "/abs/path/ggml-small.bin"  # override the model file entirely

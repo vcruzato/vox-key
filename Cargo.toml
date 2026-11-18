@@ -1,0 +1,29 @@
+[package]
+name = "voxkey"
+version = "0.1.0"
+edition = "2024"
+description = "Push-to-talk voice dictation for Linux/Wayland"
+license = "MIT"
+
+[dependencies]
+evdev = "0.13"
+cpal = "0.18"
+whisper-rs = "0.16"
+ksni = { version = "0.3", default-features = false, features = ["blocking", "async-io"] }
+serde = { version = "1", features = ["derive"] }
+toml = "1"
+clap = { version = "4", features = ["derive"] }
+anyhow = "1"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "fmt"] }
+
+[dev-dependencies]
+tempfile = "3"
+
+[lib]
+name = "voxkey"
+path = "src/lib.rs"
+
+[[bin]]
+name = "voxkey"
+path = "src/main.rs"
